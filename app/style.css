@@ -1,0 +1,51 @@
+html, body {
+    box-sizing: border-box;
+    /*user-select: none;*/
+    overflow: hidden;
+    max-width: 100vw;
+    max-height: 100vh;
+}
+#content-container {
+    overflow: scroll;
+    padding: 15px;
+    height: calc(100vh - 72px);
+}
+#appbar,
+#appbar * {
+    -webkit-app-region: drag;
+}
+#appbar .clickable,
+#appbar .clickable * {
+    -webkit-app-region: no-drag !important;
+}
+#app-window-operations i.mdui-icon {
+    pointer-events: none;
+}
+#resizers * {
+    position: absolute;
+    -webkit-app-region: no-drag;
+}
+#resizers .top,
+#resizers .bottom {
+    left: 0;
+    width: 100vw;
+    height: 2px;
+}
+#resizers .top {
+    top: 0;
+}
+#resizers .bottom {
+    bottom: 0;
+}
+#resizers .left,
+#resizers .right {
+    top: 0;
+    width: 2px;
+    height: 100vh;
+}
+#resizers .left {
+    left: 0;
+}
+#resizers .right {
+    right: 0;
+}
